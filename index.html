@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./vendor/css/normalize.css">
+  <link rel="stylesheet" href="./local/css/style.css">
+  
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+	<div class="container">
+		<div class="title-bar">
+			<div class="title-wrapper">
+				<h1 class="app-title">devfinder</h1>
+			</div>
+			<div class="ui-mode-switch">
+				<h4 class="mode-name">DARK</h4>
+				<img style="height: 20px; width: 20px;" class="dark-mode-icon" src="./assets/icon-moon.svg" alt="dark-mode switch">
+			</div>
+		</div>
+		<div class="search-bar">
+			<form action="#">
+				<div class="search-container">
+					<div class="bar-left-wrapper">
+						<img style="height: 20px; width: 20px;" class="search-icon" src="./assets/icon-search.svg" alt="search-icon">
+						<input type="text" placeholder="Search Github username&#8230" name="search" class="search-input">
+					</div>
+					<button type="submit" class="search-button">Search</button>
+				</div>
+			</form>
+		</div>
+		<div class="user-profile-card">
+			<div class="avatar-wrapper--desktop">
+				<img src="#" class="avatar" id="avatar" alt="user avatar">
+			</div>
+			<div class="user-info">
+				<div class="info-outer-wrapper">
+					<div class="avatar-wrapper--mobile">
+						<img src="#" class="avatar" id="avatar" alt="user avatar">
+					</div>
+					<div class="info-inner-wrapper">
+						<div class="heading-wrapper">
+							<h2 class="user-name" id="user-name">The Octocat</h2>
+							<h3 class="user-link" id="user-link">@octocat</h3>
+						</div>
+						<div class="join-date-wrapper">
+							<p class="join-date" id="join-date">Joined 25 Jan 2011</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bio-wrapper">
+				<p class="user-description">This profile has no bio.</p>
+			</div>
+	  		<div class="stats-container">
+				<div class="repos-wrapper">
+					<h4 class="stats-heading">Repos</h4>
+					<h2 class="stats-data">8</h2>
+				</div>
+				<div class="followers-wrapper">
+					<h4 class="stats-heading">Followers</h4>
+					<h2 class="stats-data">3938</h2>
+				</div>
+				<div class="following-wrapper">
+					<h4 class="stats-heading">Following</h4>
+					<h2 class="stats-data">9</h2>
+				</div>
+			</div>
+			<div class="about-container">
+				<div class="about-left-wrapper">
+					<div class="location-wrapper">
+						<img class="location-icon" src="./assets/icon-location.svg" alt="location icon">
+						<p class="location">San Francisco</p>
+					</div>
+					<div class="link-wrapper">
+						<img class="blog-icon" src="./assets/icon-website.svg" alt="website icon">
+						<p class="blog-link"><a href="#">https://github.blog</a></p>
+					</div>
+				</div>
+				<div class="about-right-wrapper">
+					<div class="twitter-wrapper">
+						<img class="twitter-icon" src="./assets/icon-twitter.svg" alt="twitter icon">
+						<p class="twitter-link">Not Available</p>
+					</div>
+					<div class="github-wrapper">
+						<img class="hub-icon" src="./assets/icon-company.svg" alt="company icon">
+						<p class="github-link">@github<p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./local/js/main.js"></script>
+</html>
