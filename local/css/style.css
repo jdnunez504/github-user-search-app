@@ -103,7 +103,15 @@ h4 {
 	align-items: center;
 }
 
-.dark-mode-icon:hover {
+.ui-mode-toggle:hover {
+	cursor: pointer;
+}
+
+.ui-mode-toggle:hover .mode-name {
+	color: var(--medium-blue--hover);
+}
+
+.ui-mode-toggle:hover .dark-mode-icon {
 	fill: var(--medium-blue--hover);
 }
 
@@ -145,6 +153,14 @@ h4 {
 	border: none;
 }
 
+.search-input:hover {
+	cursor: pointer;
+}
+
+.search-input:focus {
+	outline: none;
+}
+
 .search-button {
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -158,6 +174,7 @@ h4 {
 
 .search-button:hover {
 	background-color: var(--blue--hover);
+	cursor: pointer;
 }
 
 /*********************
@@ -289,6 +306,7 @@ h4 {
 
 .blog-link a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .icon-wrapper {
