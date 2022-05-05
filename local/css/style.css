@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-        /* Light Mode Colors */
+    /* Default Mode Colors */
 	--blue: #0079FF;
 	--blue--hover: #60ABFF;
 	--gray: #697C9A;
@@ -12,8 +12,9 @@
 	--gray-white: #F6F8FF;
 	--white-1: #FEFEFE;
 	--black-1: #222731;
-	/* Dark Mode Colors */
+	/* Alt Mode Colors */
 	--white-2: #FFFFFF;
+	--white-2--hover: #90A4D4;
 	--dark-gray-2: #141D2F;
 	--dark-cool-gray: #1E2A47;
 }
@@ -111,7 +112,7 @@ h4 {
 	color: var(--medium-blue--hover);
 }
 
-.ui-mode-toggle:hover .dark-mode-icon {
+.ui-mode-toggle:hover .mode-icon {
 	fill: var(--medium-blue--hover);
 }
 
@@ -336,4 +337,106 @@ h4 {
 .hub-icon {
 	height: 1.25rem;
 	width: 1.25rem;
+}
+
+/********************
+ * Alt-mode styling *
+ ********************/
+
+body .alt-mode{
+	background-color: var(--dark-gray-2);
+}
+
+/********************
+ * Title-bar *
+ *******************/
+
+.app-title .alt-mode {
+	color: var(--white-2); 
+}
+
+.mode-name .alt-mode {
+	color: var(--white-2);
+	display: none;
+}
+
+.ui-mode-toggle .alt-mode {
+	display: none;
+}
+
+.ui-mode-toggle:hover .alt-mode {
+}
+
+.ui-mode-toggle:hover .mode-name .alt-mode {
+	color: var(--white-2--hover);
+}
+
+.ui-mode-toggle:hover .mode-icon .alt-mode {
+	fill: var(--white-2--hover);
+}
+
+/********************
+ * Search-bar *
+ *******************/
+
+.search-container .alt-mode {
+	background-color: var(--dark-cool-gray);
+	box-shadow: 2px 2px 18px 8px #000000;
+}
+
+/*********************
+ * User-Profile-Card *
+ *********************/
+
+.user-profile-card .alt-mode {
+	background-color: var(--dark-cool-gray);
+	box-shadow: 2px 2px 18px 8px #000000;
+}
+
+.user-name .alt-mode {
+	color: var(--white-2);
+}
+
+.join-date .alt-mode {
+	color: var(--white-2);
+}
+
+.user-description .alt-mode {
+	color: var(--white-2);
+}
+
+/*********************
+ * Stats-Container *
+ *********************/
+
+.stats-container .alt-mode {
+	background-color: var(--dark-gray-2);
+}
+
+.stats-heading .alt-mode {
+	color: var(--white-2);
+}
+
+.stats-data .alt-mode {
+	color: var(--white-2);
+}
+
+/*******************
+ * About-container *
+ *******************/
+
+.about-data .alt-mode {
+	color: var(--white-2);
+}
+
+.about-data.unavailable .alt-mode{
+	color: var(--medium-blue--unavailable);
+}
+
+.blog-link a .alt-mode{
+	color: var(--white-2);
+}
+
+.about-icon .unavailable .alt-mode {
+	fill: var(--medium-blue--unavailable);
 }
