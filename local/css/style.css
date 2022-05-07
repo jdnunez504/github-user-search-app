@@ -440,3 +440,162 @@ body .alt-mode{
 .about-icon .unavailable .alt-mode {
 	fill: var(--medium-blue--unavailable);
 }
+
+/*****************
+ * Tablet styles *
+ *****************/
+
+@media screen and (min-width: 768px) {
+
+	body {
+		font-size: 0.9375rem;
+	}
+
+	h2 {
+		font-size: 1.625rem;
+		line-height: 2.4375rem;
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	h4 {
+		font-size: 0.8125rem;
+		line-height: 1.1875rem;
+	}
+
+	.container {
+		padding: 8.75rem 6.0625rem; 
+	}
+
+	/********************
+	 * Title-bar *
+	 *******************/
+	/********************
+	 * Search-bar *
+	 *******************/
+
+	.search-bar {
+		margin-bottom: 1.5rem;
+	}
+
+	.search-container {
+		padding: 0.625rem;
+		box-shadow: 2px 2px 18px 8px #4B6A9B0F;
+	}
+
+	.search-icon-wrapper {
+		width: 4.375rem;
+	}
+
+	.search-button {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		padding: 0.8125rem 1.5rem;
+	}
+
+	/*********************
+	 * User-Profile-Card *
+	 *********************/
+
+	.user-profile-card {
+		padding: 2.5rem;
+		margin-bottom: 6rem;
+		box-shadow: 2px 2px 18px 8px #4B6A9B0F;
+	}
+
+	.avatar-wrapper--mobile {
+		width: 7.3125rem;
+		height: 7.3125rem;
+		margin-right: 2.3125rem;
+	}
+
+	.user-info {
+		margin-bottom: 2rem;
+	}
+
+	.info-outer-wrapper {
+		margin-bottom: 1.5rem;
+	}
+
+	.info-inner-wrapper {
+		justify-content: center;
+	}
+
+	.user-name {
+		font-size: 1.625rem;
+		line-height: 2.4375rem;
+	}
+
+	.join-date {
+		line-height: 1.375rem;
+	}
+
+	/*********************
+	 * Stats-Container *
+	 *********************/
+
+	.stats-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 0.9375rem 2rem;
+		margin-bottom: 1.875rem;
+	}
+
+	.data-wrapper {
+		align-items: normal;
+		width: 8.5rem;
+	}
+
+	.data-wrapper:nth-of-type(2) {
+		margin-left: 0.3125rem;
+	}
+
+	.data-wrapper:nth-of-type(3) {
+		margin-left: 1.125rem;
+		margin-bottom: 0.125rem;
+	}
+
+	.stats-heading {
+		margin-bottom: 0rem;
+	}
+
+	.stats-data {
+		font-size: 1.375rem;
+		line-height: 2.0625rem;
+	}
+
+	/*******************
+	 * About-container *
+	 *******************/
+
+	.about-container {
+		flex-direction: row;
+	}
+	
+	.about-right-wrapper,
+	.about-left-wrapper {
+		width: 13.75rem;
+	}
+	
+	.about-right-wrapper > div:last-child,
+	.about-left-wrapper > div:last-child {
+		margin-bottom: 0rem;
+	}
+	
+	.about-right-wrapper {
+		margin-left: 3.3125rem;
+	}
+
+	.about-inner-wrapper {
+		margin-bottom: 1.1875rem;
+	}
+
+	.about-data {
+		line-height: 1.375rem;	
+	}
+}
