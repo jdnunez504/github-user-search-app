@@ -544,11 +544,13 @@ body .alt-mode{
 		justify-content: flex-start;
 		padding: 0.9375rem 2rem;
 		margin-bottom: 1.875rem;
+		gap: 1.125rem;
 	}
 
 	.data-wrapper {
 		align-items: normal;
-		width: 8.5rem;
+		/*width: 8.5rem;*/
+		flex: 1 0 8.5rem;
 	}
 
 	.data-wrapper:nth-of-type(2) {
@@ -575,11 +577,13 @@ body .alt-mode{
 
 	.about-container {
 		flex-direction: row;
+		gap: 3.3125rem;
 	}
 	
 	.about-right-wrapper,
 	.about-left-wrapper {
-		width: 13.75rem;
+		/*width: 13.75rem;*/
+		flex: 1;
 	}
 	
 	.about-right-wrapper > div:last-child,
@@ -588,7 +592,7 @@ body .alt-mode{
 	}
 	
 	.about-right-wrapper {
-		margin-left: 3.3125rem;
+		/*margin-left: 3.3125rem*/;
 	}
 
 	.about-inner-wrapper {
