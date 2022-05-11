@@ -355,8 +355,12 @@ body .alt-mode{
 	color: var(--white-2); 
 }
 
-.mode-name .alt-mode {
+.mode-name-alt {
 	color: var(--white-2);
+	display: none;
+}
+
+.mode-icon-alt {
 	display: none;
 }
 
@@ -367,11 +371,11 @@ body .alt-mode{
 .ui-mode-toggle:hover .alt-mode {
 }
 
-.ui-mode-toggle:hover .mode-name .alt-mode {
+.ui-mode-toggle:hover .mode-name-alt {
 	color: var(--white-2--hover);
 }
 
-.ui-mode-toggle:hover .mode-icon .alt-mode {
+.ui-mode-toggle:hover .mode-icon-alt {
 	fill: var(--white-2--hover);
 }
 
