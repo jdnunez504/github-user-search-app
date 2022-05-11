@@ -508,9 +508,15 @@ body .alt-mode{
 	}
 
 	.avatar-wrapper--mobile {
-		width: 7.3125rem;
+		/*width: 7.3125rem;*/
 		height: 7.3125rem;
-		margin-right: 2.3125rem;
+		/*margin-right: 2.3125rem;*/
+		flex: 1 0 7.3125rem;
+		display: flex;
+	}
+
+	.avatar {
+		flex: 0 1 content;
 	}
 
 	.user-info {
@@ -519,10 +525,13 @@ body .alt-mode{
 
 	.info-outer-wrapper {
 		margin-bottom: 1.5rem;
+		gap: 2.3125rem;
+		justify-content: flex-start;
 	}
 
 	.info-inner-wrapper {
 		justify-content: center;
+		flex: 3 0 auto;
 	}
 
 	.user-name {
@@ -602,4 +611,43 @@ body .alt-mode{
 	.about-data {
 		line-height: 1.375rem;	
 	}
+}
+
+/************************
+ **** Desktop Styles ****
+ ************************/
+
+@media screen and (min-width: 1080px) {
+	body {
+		display: flex;
+		justify-content: center;
+	}
+
+	.container {
+		padding: 0;
+		padding-top: 8%;
+		max-width: 730px;
+	}
+	
+	.avatar-wrapper--desktop {
+		display: flex;
+		height: 7.3125rem;
+		flex: 1 0 7.3125rem;
+	}
+
+	.avatar-wrapper--mobile {
+		display: none;
+	}
+
+	.user-profile-card {
+		display: flex;
+		flex-direction: row;
+		gap: 2.3125rem;
+	}
+
+	.info-inner-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 }
