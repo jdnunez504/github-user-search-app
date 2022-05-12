@@ -236,7 +236,7 @@ h4 {
 	line-height: 1.5rem;
 }
 
-.user-link {
+.user-login {
 	color: var(--blue);
 }
 
@@ -246,7 +246,7 @@ h4 {
 	margin: 0;
 }
 
-.user-description {
+.user-bio {
 	color: var(--medium-blue);
 	line-height: 1.5625rem;
 	margin: 0;
