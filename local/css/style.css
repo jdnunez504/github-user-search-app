@@ -152,6 +152,7 @@ h4 {
 .search-input {
 	flex-grow: 1;
 	border: none;
+	color: black;
 }
 
 .search-input:hover {
@@ -160,6 +161,11 @@ h4 {
 
 .search-input:focus {
 	outline: none;
+}
+
+.search-bar form ::-moz-placeholder {
+	color: var(--medium-blue);
+	opacity: 1;
 }
 
 .search-button {
@@ -315,7 +321,7 @@ h4 {
 	display: flex;
 }
 
-.about-icon .unavailable {
+.about-icon.unavailable {
 	fill: var(--medium-blue--unavailable);
 }
 
@@ -343,7 +349,7 @@ h4 {
  * Alt-mode styling *
  ********************/
 
-body .alt-mode{
+body.alt-mode{
 	background-color: var(--dark-gray-2);
 }
 
@@ -351,22 +357,56 @@ body .alt-mode{
  * Title-bar *
  *******************/
 
-.app-title .alt-mode {
+.app-title.alt-mode {
 	color: var(--white-2); 
+}
+
+.mode-name.alt-mode {
+	display: none;
+}
+
+.mode-svg.alt-mode {
+	display: none;
+}
+
+.mode-icon.alt-mode {
+	display: none;
 }
 
 .mode-name-alt {
 	color: var(--white-2);
 	display: none;
+	font-size: 0.8125rem;
+	line-height: 0.8125rem;
+	font-weight: 700;
+	margin-right: 1rem;
+}
+
+.mode-name-alt.alt-mode {
+	display: inline;
+}
+
+.mode-svg-alt {
+	display: none;
+}
+
+.mode-svg-alt.alt-mode {
+	display: inline;
 }
 
 .mode-icon-alt {
 	display: none;
 }
 
+.mode-icon-alt.alt-mode {
+	display: inline;
+}
+
+/*
 .ui-mode-toggle .alt-mode {
 	display: none;
 }
+*/
 
 .ui-mode-toggle:hover .alt-mode {
 }
@@ -383,29 +423,39 @@ body .alt-mode{
  * Search-bar *
  *******************/
 
-.search-container .alt-mode {
+.search-container.alt-mode {
 	background-color: var(--dark-cool-gray);
 	box-shadow: 2px 2px 18px 8px #000000;
+}
+
+.search-bar form .alt-mode ::-moz-placeholder {
+	color: white;
+	opacity: 1;
+}
+
+.search-input.alt-mode {
+	background-color: var(--dark-cool-gray);
+	color: var(--white-2);
 }
 
 /*********************
  * User-Profile-Card *
  *********************/
 
-.user-profile-card .alt-mode {
+.user-profile-card.alt-mode {
 	background-color: var(--dark-cool-gray);
 	box-shadow: 2px 2px 18px 8px #000000;
 }
 
-.user-name .alt-mode {
+.user-name.alt-mode {
 	color: var(--white-2);
 }
 
-.join-date .alt-mode {
+.join-date.alt-mode {
 	color: var(--white-2);
 }
 
-.user-description .alt-mode {
+.user-description.alt-mode {
 	color: var(--white-2);
 }
 
@@ -413,15 +463,15 @@ body .alt-mode{
  * Stats-Container *
  *********************/
 
-.stats-container .alt-mode {
+.stats-container.alt-mode {
 	background-color: var(--dark-gray-2);
 }
 
-.stats-heading .alt-mode {
+.stats-heading.alt-mode {
 	color: var(--white-2);
 }
 
-.stats-data .alt-mode {
+.stats-data.alt-mode {
 	color: var(--white-2);
 }
 
@@ -429,20 +479,24 @@ body .alt-mode{
  * About-container *
  *******************/
 
-.about-data .alt-mode {
+.about-data.alt-mode {
 	color: var(--white-2);
 }
 
-.about-data.unavailable .alt-mode{
-	color: var(--medium-blue--unavailable);
+.about-data.unavailable.alt-mode{
+	opacity: 0.5;
 }
 
-.blog-link a .alt-mode{
+.blog-link.alt-mode a {
 	color: var(--white-2);
 }
 
-.about-icon .unavailable .alt-mode {
-	fill: var(--medium-blue--unavailable);
+.about-icon.alt-mode {
+	fill: var(--white-2);
+}
+
+.about-icon.unavailable.alt-mode {
+	opacity: 0.5;
 }
 
 /*****************
