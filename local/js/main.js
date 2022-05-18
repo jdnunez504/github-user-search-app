@@ -75,7 +75,25 @@ function setUnavailable(val, i, arr) {
 	val.classList.add('unavailable');
 }
 
+function clearInput() {
+	searchInput.value = '';
+}
+
+function resetUnavailable() {
+	aboutDataNodeList.forEach(function(val, i, arr) {
+		if (val.classList.contains('unavailable')) {
+			val.classList.remove('unavailable');
+		};
+	});
+	aboutIconNodeList.forEach(function(val, i, arr) {
+		if (val.classList.contains('unavailable')) {
+			val.classList.remove('unavailable');
+		};
+	});
+}
+
 function requestUserData(username) {
+	resetUnavailable();
 	const xhr = new XMLHttpRequest();
 	const url = `https://api.github.com/users/${username}`;
 	xhr.open('GET', url, true);
@@ -135,6 +153,7 @@ function requestUserData(username) {
 			company.textContent = `@${data.company}`;
 	}
 	xhr.send();
+	clearInput();
 }
 
 //requestUserData('timmywheels');
