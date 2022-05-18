@@ -33,6 +33,7 @@ const company = document.getElementById('company');
 const companyIcon = document.getElementById('company-icon');
 const aboutIconNodeList = document.querySelectorAll('.about-icon');
 const searchInput = document.querySelector('.search-input');
+const errorMsg = document.querySelector('.error-msg');
 
 uiModeToggle.addEventListener('click', function(e) {
 	e.preventDefault();
@@ -60,6 +61,12 @@ uiModeToggle.addEventListener('click', function(e) {
 	console.log('Toggle clicked...');
 });
 
+searchButton.addEventListener('click', function(e) {
+	e.preventDefault();
+	const searchedUser = searchInput.value;
+	requestUserData(searchedUser);
+});
+
 function toggleAltMode(val, i, arr) {
 	val.classList.toggle('alt-mode');
 }
@@ -80,6 +87,16 @@ function requestUserData(username) {
 		userName.textContent = `${data.name}`;
 		userLogin.textContent = `@${data.login}`;
 		console.log(data.created_at);
+		const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+						'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		const createdDate = new Date(data.created_at);
+		const createdDay = createdDate.getDay();
+		const createdMonth = createdDate.getMonth();
+		const createdYear = createdDate.getFullYear();
+		const joinedDay = (createdDay + 1).toString();
+		const joinedMonth = months[createdMonth + 1];
+		const joinedYear = createdYear.toString();
+		joinDate.textContent = `Joined ${joinedDay} ${joinedMonth} ${joinedYear}`;
 		userBio.textContent = `${data.bio}`;
 		publicRepos.textContent = `${data.public_repos}`;
 		followers.textContent = `${data.followers}`;
@@ -120,4 +137,4 @@ function requestUserData(username) {
 	xhr.send();
 }
 
-requestUserData('timmywheels');
+//requestUserData('timmywheels');

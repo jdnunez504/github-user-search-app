@@ -17,6 +17,8 @@
 	--white-2--hover: #90A4D4;
 	--dark-gray-2: #141D2F;
 	--dark-cool-gray: #1E2A47;
+	/* Error */
+	--error-red: #F74646;
 }
 
 html {
@@ -182,6 +184,14 @@ h4 {
 .search-button:hover {
 	background-color: var(--blue--hover);
 	cursor: pointer;
+}
+
+.error-msg {
+	font-family: 'Space Mono', Monospace;
+	color: var(--error-red);
+	font-size: 0.8125rem;
+	font-weight: 700;
+	display: none;
 }
 
 /*********************
@@ -553,6 +563,10 @@ body.alt-mode{
 		font-size: 1rem;
 		line-height: 1.5rem;
 		padding: 0.8125rem 1.5rem;
+	}
+
+	.error-msg {
+		font-size: 0.9375rem;
 	}
 
 	/*********************
