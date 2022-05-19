@@ -194,6 +194,10 @@ h4 {
 	display: none;
 }
 
+.error-msg.visible {
+	display: inline;
+}
+
 /*********************
  * User-Profile-Card *
  *********************/
@@ -326,6 +330,10 @@ h4 {
 	cursor: pointer;
 }
 
+.blog-link.unavailable {
+	color: var(--medium-blue--unavailable);
+}
+
 .icon-wrapper {
 	width: 2rem;
 	display: flex;
@@ -356,8 +364,10 @@ h4 {
 }
 
 /********************
- * Alt-mode styling *
- ********************/
+*********************
+** Alt-mode styling *
+*********************
+*********************/
 
 body.alt-mode{
 	background-color: var(--dark-gray-2);
@@ -465,7 +475,7 @@ body.alt-mode{
 	color: var(--white-2);
 }
 
-.user-description.alt-mode {
+.user-bio.alt-mode {
 	color: var(--white-2);
 }
 
@@ -709,6 +719,10 @@ body.alt-mode{
 
 	.avatar-wrapper--mobile {
 		display: none;
+	}
+
+	.user-info-container {
+		flex: 1 0 28rem;
 	}
 
 	.user-profile-card {

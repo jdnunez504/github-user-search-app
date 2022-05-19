@@ -25,8 +25,8 @@ const following = document.getElementById('following');
 const aboutDataNodeList = document.querySelectorAll('.about-data');
 const _location = document.getElementById('location');
 const _locationIcon = document.getElementById('location-icon');
-const blog = document.getElementById('blog');
-const blogIcon = document.getElementById('blog-icon');
+const blogLink = document.querySelector('.blog-link');
+const blogIconNodeList = document.querySelectorAll('.blog-icon');
 const twitterUsername = document.getElementById('twitter-username');
 const twitterIcon = document.getElementById('twitter-icon');
 const company = document.getElementById('company');
@@ -92,12 +92,26 @@ function resetUnavailable() {
 	});
 }
 
+function setVisible(val) {
+	val.classList.add('visible');
+}
+
+function resetVisible() {
+	if(errorMsg.classList.contains('visible'))
+		errorMsg.classList.remove('visible');
+}
+
 function requestUserData(username) {
 	resetUnavailable();
+	resetVisible();
 	const xhr = new XMLHttpRequest();
 	const url = `https://api.github.com/users/${username}`;
 	xhr.open('GET', url, true);
 	xhr.onload = function() {
+		if(xhr.status != 200) {
+		setVisible(errorMsg);
+			console.log('** HTTP Error: ' + xhr.status);
+		}
 		const data = JSON.parse(this.response);
 		console.log(data);
 		avatar.setAttribute("src", `${data.avatar_url}`);
@@ -128,13 +142,13 @@ function requestUserData(username) {
 		else
 			_location.textContent = `${data.location}`;
 
-		if(data.blog == null) {
-			setUnavailable(blog);
-			setUnavailable(blogIcon);
-			blog.textContent = 'Not Available';
+		if(data.blog == '') {
+			setUnavailable(blogLink);
+			blogIconNodeList.forEach(setUnavailable);
+			blogLink.textContent = 'Not Available';
 		}
 		else
-			blog.textContent = `${data.blog}`;
+			blogLink.textContent = `${data.blog}`;
 
 		if(data.twitter_username == null) {
 			setUnavailable(twitterUsername);
@@ -152,6 +166,9 @@ function requestUserData(username) {
 		else
 			company.textContent = `@${data.company}`;
 	}
+	xhr.onerror = function() {
+		console.log('** An error during the transaction.');
+	};
 	xhr.send();
 	clearInput();
 }
